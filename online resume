@@ -1,0 +1,68 @@
+import java.util.Scanner;
+class Resume {
+    private String name;
+    private String email;
+    private String phoneNumber;
+    private String education;
+    private String experience;
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
+    public void setEducation(String education) {
+        this.education = education;
+    }
+    
+    public void setExperience(String experience) {
+        this.experience = experience;
+    }
+    
+    public void displayResume() {
+        System.out.println("---------- Resume ----------");
+        System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("Education: " + education);
+        System.out.println("Experience: " + experience);
+        System.out.println("-----------------------------");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Resume resume = new Resume();
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("Enter your name: ");
+        String name = scan.nextLine();
+        resume.setName(name);
+        
+        System.out.print("Enter your email: ");
+        String email = scan.nextLine();
+        resume.setEmail(email);
+        
+        System.out.print("Enter your phone number: ");
+        String phoneNumber = scan.nextLine();
+        resume.setPhoneNumber(phoneNumber);
+        
+        System.out.print("Enter your education: ");
+        String education = scan.nextLine();
+        resume.setEducation(education);
+        
+        System.out.print("Enter your experience: ");
+        String experience = scan.nextLine();
+        resume.setExperience(experience);
+        
+        System.out.println("\n---------- Resume Preview ----------");
+        resume.displayResume();
+    }
+}
